@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieDetails">
+    tools:context=".activities.MovieDetails">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -53,19 +53,20 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/movie_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24dp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:textStyle="bold"
                 android:text="Movie Name"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:id="@+id/linear_layout"
@@ -101,25 +102,26 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/rating_text"
-               android:textSize="25dp"
-               android:text="asdasd"
-               app:layout_constraintTop_toBottomOf="@id/linear_layout"
-               app:layout_constraintEnd_toEndOf="parent"
-               android:textColor="@color/black"
-               android:layout_marginEnd="@dimen/_5sdp"
-               android:textStyle="bold"/>
 
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:theme="@style/RatingBar"
+                app:layout_constraintBottom_toBottomOf="@+id/text_instructions_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_instructions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="72dp"
                 android:fontFamily="@font/myfont"
                 android:text="Instructions:"
                 android:textColor="@color/black"
@@ -136,10 +138,9 @@
                 android:layout_marginEnd="@dimen/_2sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/text_instructions"
-                app:layout_constraintTop_toBottomOf="@id/text_instructions"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
+                app:layout_constraintTop_toBottomOf="@id/text_instructions" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

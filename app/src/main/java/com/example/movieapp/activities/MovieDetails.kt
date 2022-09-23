@@ -1,22 +1,14 @@
-package com.example.movieapp
+package com.example.movieapp.activities
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.provider.CalendarContract
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.movieapp.adapters.SetOnMovieClickListener
+import com.example.movieapp.R
 import com.example.movieapp.databinding.ActivityMovieDetailsBinding
-import com.example.movieapp.databinding.FragmentHomeBinding
-import com.example.movieapp.pojo.MovieDetails
-import com.example.movieapp.pojo.Result
 import com.example.movieapp.viewModel.MovieDetailViewModel
 
 
@@ -56,7 +48,7 @@ class MovieDetails : AppCompatActivity() {
                 .into(binding.imgMovieDetail)
 
             binding.textArea.text = "Area : $languages"
-            binding.ratingText.text=movie!!.get(0).vote_average.toString()
+            binding.ratingBar.rating=(movie!!.get(0).vote_average.toFloat()/2)
             binding.textCategory.text="Genres : $category"
             binding.textInstructionsText.text = movie!!.get(0).overview
             binding.collapsingToolBar.title = ""

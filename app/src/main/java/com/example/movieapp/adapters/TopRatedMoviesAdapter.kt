@@ -51,7 +51,7 @@ class TopRatedMoviesAdapter :RecyclerView.Adapter<TopRatedMoviesAdapter.TopRated
         /* holder.itemView.setOnClickListener {movie ->
              movie.id
              val context=holder.itemView.context
-             val intent = Intent( context, com.example.movieapp.MovieDetails::class.java)
+             val intent = Intent( context, com.example.movieapp.activities.MovieDetails::class.java)
              intent.putExtra("id",movie.id)
              context.startActivity(intent)
 

@@ -1,4 +1,4 @@
-package com.example.movieapp
+package com.example.movieapp.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,19 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.movieapp.activities.MovieDetails
 import com.example.movieapp.adapters.PopularMoviesAdapter
 import com.example.movieapp.adapters.SetOnMovieClickListener
 import com.example.movieapp.adapters.TopRatedMoviesAdapter
 import com.example.movieapp.databinding.FragmentHomeBinding
 import com.example.movieapp.pojo.Result
 import com.example.movieapp.viewModel.HomeViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 
 class HomeFragment : Fragment() {
